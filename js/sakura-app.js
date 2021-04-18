@@ -1058,8 +1058,8 @@ var home = location.href,
                 document.getElementById("allcount").innerHTML=data.Allcount;
             }
         })
-        .catch(err => console.error(err))*/
-    },
+        .catch(err => console.error(err))
+    },*/
     TOC: function () {
       if ($('.toc').length > 0 && document.body.clientWidth > 1200) {
         if ($(".pattern-center").length > 0) { //有图的情况
