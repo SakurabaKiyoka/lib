@@ -1109,15 +1109,7 @@ var home = location.href,
     },
     VA: function () {
       if (!valine) {
-        /*var valine = new Valine()
-        valine.init({
-          el: '#vcomments',
-          appId: mashiro_option.v_appId,
-          appKey: mashiro_option.v_appKey,
-          path: window.location.pathname,
-          placeholder: '你是我一生只会遇见一次的惊喜 ...'
-        })
-      }*/
+      }
     },
     MJ: function () {
       if (mashiro_option.mathjax == '1') {
