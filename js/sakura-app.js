@@ -1047,8 +1047,8 @@ mashiro_global.ini.normalize()
 var home = location.href,
   s = $('#bgvideo')[0],
   Siren = {
-    /*BSZ: function() {
-    fetch('https://counts.42cloud.cn/api/counts.html')
+    BSZ: function() {
+    /*fetch('https://counts.42cloud.cn/api/counts.html')
         .then(response => response.json())
         .then(data => {
               if (document.getElementById("readcount")) {
@@ -1058,8 +1058,8 @@ var home = location.href,
                 document.getElementById("allcount").innerHTML=data.Allcount;
             }
         })
-        .catch(err => console.error(err))
-    },*/
+        .catch(err => console.error(err))*/
+    },
     TOC: function () {
       if ($('.toc').length > 0 && document.body.clientWidth > 1200) {
         if ($(".pattern-center").length > 0) { //有图的情况
@@ -1109,6 +1109,7 @@ var home = location.href,
     },
     VA: function () {
       if (!valine) {
+        var valine = new Valine()
       }
     },
     MJ: function () {
