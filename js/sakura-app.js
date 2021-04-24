@@ -433,7 +433,7 @@ function checkBgImgCookie () {
     $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
   }
   if (bgurl != '') {
-    if (bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/sakura.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/plaid.jpg' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/star.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/point.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/little-monster.png') {
+    if (bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/sakura.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/plaid.jpg' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/star.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/point.png' || bgurl == 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/little-monster.png') {
       mashiro_global.variables.skinSecter = true
       mashiro_global.variables.isNight = false
       $('#night-mode-cover').css('visibility', 'hidden')
@@ -500,11 +500,11 @@ $(document).ready(function () {
       setCookie('bgImgSetting', url, 30)
     })
   }
-  changeBG('#sakura-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/sakura.png')
-  changeBG('#gribs-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/plaid.jpg')
-  changeBG('#pixiv-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/star.png')
-  changeBG('#KAdots-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/point.png')
-  changeBG('#totem-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/little-monster.png')
+  changeBG('#sakura-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/sakura.png')
+  changeBG('#gribs-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/plaid.jpg')
+  changeBG('#pixiv-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/star.png')
+  changeBG('#KAdots-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/point.png')
+  changeBG('#totem-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/little-monster.png')
   changeBGnoTrans('#bing-bg', 'https://api.shino.cc/bing/')
   $('.skin-menu #white-bg').click(function () {
     mashiro_global.variables.skinSecter = false
@@ -522,7 +522,7 @@ $(document).ready(function () {
   $('.skin-menu #dark-bg').click(function () {
     mashiro_global.variables.skinSecter = true
     mashiro_global.variables.isNight = true
-    $('body').css('background-image', 'url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/starry_sky.png)')
+    $('body').css('background-image', 'url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/starry_sky.png)')
     $('.blank').css('background-color', 'rgba(255,255,255,.8)')
     $('#night-mode-cover').css('visibility', 'visible')
     $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
