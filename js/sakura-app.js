@@ -510,7 +510,7 @@ $(document).ready(function () {
     mashiro_global.variables.skinSecter = false
     mashiro_global.variables.isNight = false
     $('#night-mode-cover').css('visibility', 'hidden')
-    $('body').css('background-image', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/site/sakura.png')//Original is none
+    $('body').css('background-image', 'none')//Original is none
     $('.blank').css('background-color', 'rgba(255,255,255,.0)')
     $('.pattern-center-sakura').removeClass('pattern-center-sakura').addClass('pattern-center')
     $('.headertop-bar-sakura').removeClass('headertop-bar-sakura').addClass('headertop-bar')
