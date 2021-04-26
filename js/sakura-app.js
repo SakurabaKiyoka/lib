@@ -481,7 +481,7 @@ $(document).ready(function () {
       $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
       $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
       closeSkinMenu()
-      setCookie('bgImgSetting', url, 30)
+      setCookie('bgImgSetting', url, 365)
     })
   }
 
@@ -497,7 +497,7 @@ $(document).ready(function () {
       $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
       $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
       closeSkinMenu()
-      setCookie('bgImgSetting', url, 30)
+      setCookie('bgImgSetting', url, 365)
     })
   }
   changeBG('#sakura-bg', 'https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/sakura.png')
@@ -517,7 +517,7 @@ $(document).ready(function () {
     $('#banner_wave_1').removeClass('banner_wave_hide_fit_skin')
     $('#banner_wave_2').removeClass('banner_wave_hide_fit_skin')
     closeSkinMenu()
-    setCookie('bgImgSetting', '', 30)
+    setCookie('bgImgSetting', '', 365)
   })
   $('.skin-menu #dark-bg').click(function () {
     mashiro_global.variables.skinSecter = true
