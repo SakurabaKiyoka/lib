@@ -1108,9 +1108,7 @@ var home = location.href,
       }
     },
     VA: function () {
-      if (!valine) {
-        var valine = new Valine()
-      }
+		
     },
     MJ: function () {
       if (mashiro_option.mathjax == '1') {
