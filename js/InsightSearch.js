@@ -33,7 +33,7 @@
             case 'PAGES':
                 $searchItems = array.map(function (item) {
                     // Use config.root instead of permalink to fix url issue
-                    return searchItem('file', item.title, null, item.text.slice(0, 150),  item.path);
+                    return searchItem('file', item.title, null, null, item.path);
                 });
                 break;
             case 'CATEGORIES':
@@ -98,10 +98,10 @@
     function filterFactory (keywords) {
         return {
             POST: function (obj) {
-                return filter(keywords, obj, ['title', 'text']);
+                return filter(keywords, obj, ['title', 'title']);
             },
             PAGE: function (obj) {
-                return filter(keywords, obj, ['title', 'text']);
+                return filter(keywords, obj, ['title', 'title']);
             },
             CATEGORY: function (obj) {
                 return filter(keywords, obj, ['name', 'slug']);
@@ -135,10 +135,10 @@
     function weightFactory (keywords) {
         return {
             POST: function (obj) {
-                return weight(keywords, obj, ['title', 'text'], [3, 1]);
+                return weight(keywords, obj, ['title', 'title'], [3, 1]);
             },
             PAGE: function (obj) {
-                return weight(keywords, obj, ['title', 'text'], [3, 1]);
+                return weight(keywords, obj, ['title', 'title'], [3, 1]);
             },
             CATEGORY: function (obj) {
                 return weight(keywords, obj, ['name', 'slug'], [1, 1]);
