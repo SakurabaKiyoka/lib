@@ -1108,7 +1108,23 @@ var home = location.href,
       }
     },
     VA: function () {
-		
+        try {
+        if (typeof REMARK42 !== undefined) {
+            REMARK42.createInstance({
+            host: "https://komento.osgu.in",
+            site_id: 'kiyoka',
+            components: ['embed', 'last-comments', 'counter'],
+            url: window.location.origin + window.location.pathname,
+            max_shown_comments: 10, 
+            theme: 'light',
+            locale: 'zh',
+            show_email_subscription: true 
+            })
+      }
+        }catch(e){
+            
+        }
+    !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document)
     },
     MJ: function () {
       if (mashiro_option.mathjax == '1') {
