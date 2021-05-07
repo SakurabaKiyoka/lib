@@ -1532,7 +1532,7 @@ $(function () {
   Siren.IA()
   Siren.LV()
   if (window.is_app) injectStyles('#nprogress .bar { display: none; }')
-  if (Poi.pjax) {
+  if (Poi.pjax == "1") {
     $(document).pjax('a[target!=_top]', '#page', {
       fragment: '#page',
       timeout: 8000
