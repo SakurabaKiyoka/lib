@@ -6,7 +6,7 @@
 }
 .post-meta em {
     margin: 0 5px;
-    color: #666;
+    color: #303030;
 }
 .aplayer {
     background:#fff;
@@ -1468,7 +1468,7 @@ a:hover,a:active {
 .site-top ul li a {
     padding:10px 0;
     display:inline-block;
-    color:#666
+    color:#101010
 }
 .site-top ul li a:hover {
     color:orange
@@ -4721,10 +4721,10 @@ i.iconfont.down {
         display:none
     }
     h1.entry-title {
-        font-size:18px
+        font-size:20px
     }
     .entry-content p {
-        font-size:14px
+        font-size:16px
     }
     .post-footer,.post-share,.post-like {
         display:none
@@ -4735,7 +4735,7 @@ i.iconfont.down {
     .post-tags {
         text-align:center;
         float:none;
-        font-size:12px
+        font-size:13px
     }
     .author-profile {
         display:none
@@ -4983,8 +4983,8 @@ i.iconfont.js-toggle-search.iconsearch {
     padding:5px 9px
 }
 #mo-nav li ul li a {
-    font-size:13px;
-    color:#9cacc5
+    font-size:14px;
+    color:#101010
 }
 #mo-nav ul li a:hover {
     cursor:pointer;
@@ -7444,7 +7444,7 @@ to {
     font-family:'Ubuntu',sans-serif
 }
 .serif {
-    font-family:游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+    font-family:sans-serif,游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 }
 @media(max-width:860px) {
     .serif {
