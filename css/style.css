@@ -2158,7 +2158,7 @@ h1.entry-title {
     vertical-align:sub
 }
 .entry-content p {
-    color:#797979
+    color:#000001
 }
 .entry-content p {
     line-height:30px
@@ -3933,7 +3933,7 @@ li.feature-2 {
     }
     .top-social_v2 li {
         margin-right: 0px !important; 
-        cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto !important;
+        cursor: url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/ayuda.cur),auto !important;
     }
 }
 #bgvideo {
@@ -7307,7 +7307,7 @@ to {
     padding:2px;
     text-shadow:none;
     border-radius:0 0 5px 5px;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur),auto
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/texto.cur),auto
 }
 .highlight-wrap code[data-rel]:before {
     color:#fff;
@@ -7444,7 +7444,7 @@ to {
     font-family:'Ubuntu',sans-serif
 }
 .serif {
-    font-family:'UD デジタル 教科書体 NK-R','UD Digi Kyokasho NK-R','Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif
+    font-family:游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 }
 @media(max-width:860px) {
     .serif {
@@ -7706,7 +7706,7 @@ img[src*="#in-center"] {
     .poem-wrap {
     margin-top:60px;
     margin-bottom:20px;
-    border-top:2px solid #797979
+    border-top:2px solid #000001
 }
 .poem-wrap h1 {
     margin:20px 6px
