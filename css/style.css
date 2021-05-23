@@ -4,14 +4,6 @@
     left: 0;
     width: 400px;
 }
-#veditor {
-    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: rgba(255,255,255,0);
-    resize: vertical;
-}
 .post-meta em {
     margin: 0 5px;
     color: #666;
@@ -720,13 +712,13 @@ audio:not([controls]) {
 a {
     background-color:transparent;
     text-decoration:none;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/ayuda.cur),auto
 }
 a:active,a:hover {
     outline:0
 }
 a:active {
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/work.cur),alias
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/work.cur),alias
 }
 abbr[title] {
     border-bottom:1px dotted
@@ -847,7 +839,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {
     margin-bottom:1.5em;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur),auto
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/texto.cur),auto
 }
 dfn,cite,em,i {
     font-style:italic
@@ -933,7 +925,7 @@ html {
 body {
     background:#fff;
     background-attachment:fixed;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),auto
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/normal.cur),auto
 }
 blockquote:before,blockquote:after,q:before,q:after {
     content:""
@@ -1091,13 +1083,13 @@ a:hover,a:active {
     opacity:1
 }
 .video-play,.loadvideo {
-    background-image:url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/play@32x32.png')
+    background-image:url('https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/play@32x32.png')
 }
 .video-pause {
-    background-image:url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/pause@32x32.png')
+    background-image:url('https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/pause@32x32.png')
 }
 #video-add {
-    background-image:url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/add@32x32.png');
+    background-image:url('https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/add@32x32.png');
     bottom:45px;
     display:none
 }
@@ -2233,11 +2225,11 @@ h1.page-title.mb- {
     z-index:99;
     width:70px;
     height:900px;
-    background:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/scroll.png) no-repeat center;
+    background:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/scroll.png) no-repeat center;
     background-size:contain;
     -webkit-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur),auto;
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/No_Disponible.cur),auto;
     opacity:1
 }
 .cd-top.cd-is-visible {
@@ -2806,18 +2798,6 @@ to {
 .mashiro-profile .box.open a:nth-of-type(5) {
     transform:rotate(90deg) translateX(120px) rotate(-90deg);
     transition-delay:.4s
-}
-#loading-comments {
-    display:none;
-    max-width:860px;
-    margin:0 auto;
-    height:40px;
-    text-align:center;
-    line-height:45px;
-    background-image:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg");
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:auto 100%
 }
 h3#comments-list-title {
     max-width:860px;
@@ -3601,7 +3581,7 @@ a.page-numbers {
     background-color:rgba(255,255,255,0)
 }
 .comment-respond textarea {
-    background-image:url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png');
+    background-image:url('https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/comment-bg.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:right;
@@ -3883,14 +3863,14 @@ li.feature-2 {
     background-color:rgba(0,0,0,.3)
 }
 .headertop.filter-grid::before {
-    background-image:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/grid.png)
+    background-image:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/grid.png)
 }
 .headertop.filter-dot::before {
-    background-image:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/dot.gif)
+    background-image:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/dot.gif)
 }
 @media(max-width:860px) {
     .headertop.filter-dot::before {
-    background-image:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/grid.png)
+    background-image:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/grid.png)
 }
 }.headertop-bar::after {
     content:'';
@@ -4100,7 +4080,7 @@ li.feature-2 {
 }
 .header-info p {
     margin:0;
-    font-family:'Ubuntu',sans-serif;
+    font-family:'UD デジタル 教科書体 NK-R','UD Digi Kyokasho NK-R','Ubuntu',sans-serif;
     font-weight:700
 }
 .top-social {
@@ -4245,7 +4225,7 @@ i.iconfont.js-toggle-search.iconsearch {
     visibility:visible;
     opacity:.99;
     animation:elastic .5s;
-    background-image:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/iloli.gif);
+    background-image:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/iloli.gif);
     background-repeat:no-repeat;
     background-position:bottom right
 }
@@ -5414,7 +5394,7 @@ i.iconfont.js-toggle-search.iconsearch {
 }.oshimai {
     height:2em;
     width:6.11em;
-    background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/oshimai.svg");
+    background:url("https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/oshimai.svg");
     background-size:cover;
     margin:0 auto
 }
@@ -5491,10 +5471,10 @@ i.iconfont.js-toggle-search.iconsearch {
     color:#555
 }
 .alipay-code:after {
-    content:"支付宝"
+    content:"Alipay"
 }
 .wechat-code:after {
-    content:"微信"
+    content:"Wechat Pay"
 }
 .sm {
     cursor:wait
@@ -5560,7 +5540,7 @@ i.iconfont.js-toggle-search.iconsearch {
     border:0;
     color:#fff;
     line-height:1;
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur),auto;
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/No_Disponible.cur),auto;
     font-size:14px;
     font-weight:500;
     padding:7px 15px;
@@ -6311,7 +6291,7 @@ button.botui-actions-buttons-button {
     cursor:pointer
 }
 .changeSkin-gear span:before {
-    content:"切换主题 | Change Skin "
+    content:"テーマを切り替え | Change Skin "
 }
 @media(max-width:800px) {
     .changeSkin-gear span::before {
@@ -6926,7 +6906,7 @@ to {
     background-color:rgba(245,245,245,.8)
 }
 #emotion-toggle,.emotion-box,.on-hover,.emotion-item,.emoji-item,.tieba-container span {
-    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur),auto
+    cursor:url(https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/site/No_Disponible.cur),auto
 }
 .alignright {
     width:auto !important
@@ -7452,7 +7432,7 @@ to {
     font-family:Helvetica,Tahoma,Arial,"文泉驛正黑","WenQuanYi Zen Hei","儷黑 Pro","LiHei Pro","微軟正黑體","Microsoft JhengHei","標楷體",DFKai-SB,sans-serif
 }
 .japanese-font {
-    font-family:游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+    font-family:'UD デジタル 教科書体 NK-R','UD Digi Kyokasho NK-R',游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 }
 .english-serif {
     font-family:'Noto Serif CJK SC','Noto Serif CJK',serif
@@ -7627,32 +7607,6 @@ img[src*="#in-center"] {
     margin-left:auto;
     margin-right:auto;
     display:block
-}
-#banner_wave_1 {
-    width:auto;
-    height:65px;
-    background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave1.png") repeat-x;
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:-236px;
-    z-index:5;
-    opacity:1;
-    transition-property:opacity,bottom;
-    transition-duration:.4s,.4s
-}
-#banner_wave_2 {
-    width:auto;
-    height:80px;
-    background:url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave2.png") repeat-x;
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:0;
-    z-index:4;
-    opacity:1;
-    transition-property:opacity,bottom;
-    transition-duration:.4s,.4s
 }
 .banner_wave_hide,.banner_wave_hide_fit_skin {
     opacity:0 !important;
