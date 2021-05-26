@@ -7426,13 +7426,13 @@ to {
     overflow:hidden
 }
 .chinese-font {
-    font-family:'Merriweather Sans',Helvetica,Tahoma,Arial,'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei',sans-serif
+    font-family:'Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','Merriweather Sans',Helvetica,Tahoma,Arial,'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei',sans-serif
 }
 .chinese-tranditional-font {
     font-family:Helvetica,Tahoma,Arial,"文泉驛正黑","WenQuanYi Zen Hei","儷黑 Pro","LiHei Pro","微軟正黑體","Microsoft JhengHei","標楷體",DFKai-SB,sans-serif
 }
 .japanese-font {
-    font-family:游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+    font-family:'源ノ角ゴシック Light',source-han-sans-japanese,游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 }
 .english-serif {
     font-family:'Noto Serif CJK SC','Noto Serif CJK',serif
@@ -7444,7 +7444,7 @@ to {
     font-family:'Ubuntu',sans-serif
 }
 .serif {
-    font-family:sans-serif,游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
+    font-family:'Source Han Serif K','Source Han Serif','source-han-serif-sc','PT Serif',游ゴシック体,'Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif
 }
 @media(max-width:860px) {
     .serif {
