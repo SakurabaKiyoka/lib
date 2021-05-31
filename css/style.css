@@ -2287,7 +2287,6 @@ h1.page-title.mb- {
     border-bottom:1px dashed #ddd;
     border-top:1px dashed #ddd;
     margin-top:30px;
-    height:82px
 }
 .post-lincenses {
     text-align:center;
@@ -2332,7 +2331,8 @@ h1.page-title.mb- {
 .post-share {
     float:right;
     list-style:none;
-    margin-right:20px
+	margin-top:30px;
+    margin-right:20px;
 }
 .post-share img:hover {
     opacity:.8
