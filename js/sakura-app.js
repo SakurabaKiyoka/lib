@@ -237,10 +237,14 @@ mashiro_global.font_control = new function () {
       if (!getCookie('font_family') || getCookie('font_family') == 'serif') { $('body').addClass('serif') }
     }
     if (getCookie('font_family') == 'sans-serif') {
-      $('body').removeClass('sans-serif')
+	  $('body').removeClass('serif')
       $('.control-btn-serif').removeClass('selected')
       $('.control-btn-sans-serif').addClass('selected')
-    }
+    } else if (getCookie('font_family') == 'serif') {
+      $('body').addClass('serif')
+      $('.control-btn-serif').addClass('selected')
+      $('.control-btn-sans-serif').removeClass('selected')
+	}
   }
 }()
 mashiro_global.font_control.ini()
