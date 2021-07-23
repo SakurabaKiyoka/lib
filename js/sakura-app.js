@@ -1116,6 +1116,14 @@ var home = location.href,
     VA: function () {
         try {
         if (typeof REMARK42 !== undefined) {
+			if (document.getElementsByTagName("html")[0]["lang"] == "zh-CN") {
+				var lang = "zh"
+			} else if (document.getElementsByTagName("html")[0]["lang"] == "ja") {
+				var lang = "ja"
+			}
+			else {
+				var lang = "en"
+			}
             REMARK42.createInstance({
             host: "https://komento.osgu.in",
             site_id: 'kiyoka',
@@ -1123,7 +1131,7 @@ var home = location.href,
             url: window.location.origin + window.location.pathname,
             max_shown_comments: 10, 
             theme: 'light',
-            locale: 'zh',
+            locale: lang,
             show_email_subscription: true 
             })
             !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document)
