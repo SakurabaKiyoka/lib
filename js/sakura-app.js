@@ -828,14 +828,16 @@ function add_copyright () {
     }
   })
 
-  function setClipboardText (event) {
+function setClipboardText (event) {
     event.preventDefault()
-    var htmlData = '' + window.getSelection().toString().replace(/\r\n/g, '\n')
-    var textData = '' + window.getSelection().toString().replace(/\r\n/g, '\n')
+    var htmlData = '' + window.getSelection().toString() // CRLF
+	// var htmlData = '' + window.getSelection().toString().replace(/\r\n/g, '\n') convert to LF use this
+    var textData = '' + window.getSelection().toString() // CRLF
+	// var textData = '' + window.getSelection().toString().replace(/\r\n/g, '\n') convert to LF use this
     if (event.clipboardData) {
       event.clipboardData.setData('text/html', htmlData)
       event.clipboardData.setData('text/plain', textData)
-      addComment.createButterbar('复制成功！<br>Copied to clipboard successfully!', 1000)
+      addComment.createButterbar('复制成功！<br>コピーしました！<br>Copied to clipboard successfully!', 2000)
     } else if (window.clipboardData) {
       return window.clipboardData.setData('text', textData)
     }
@@ -895,7 +897,7 @@ function inlojv_js_getqqinfo () {
         emailAddressFlag = $('input#email').val()
       }, error: function () {
         if (qq_test.test(qq)) {
-          addComment.createButterbar('QQ号不存在（建议不要使用纯数字昵称）')
+          addComment.createButterbar('Error')
         }
         $('input#qq').val('')
         $('.qq-check').css('display', 'none')
@@ -914,7 +916,7 @@ function inlojv_js_getqqinfo () {
       jsonpCallback: 'qqavatarCallBack',
       beforeSend: function () {
         if (qq_test.test(qq)) {
-          addComment.createButterbar('正在获取QQ头像...')
+          addComment.createButterbar('Getting avatar...')
         }
       }, success: function (data) {
         $('div.comment-user-avatar img').attr('src', data[qq])
@@ -922,7 +924,7 @@ function inlojv_js_getqqinfo () {
         setCookie('user_avatar', data[qq], 30)
       }, error: function () {
         if (qq_test.test(qq)) {
-          addComment.createButterbar('QQ号不存在（建议不要使用纯数字昵称）')
+          addComment.createButterbar('Error')
         }
         $('input#qq', 'input#email', 'input#url').val('')
         if (!$('input#qq').val()) {
