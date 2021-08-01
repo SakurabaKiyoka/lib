@@ -702,7 +702,7 @@ var pjaxInit = function () {
   })
   smileBoxToggle()
   timeSeriesReload()
-  add_copyright()
+  //add_copyright()
   console.log($('#myscript').text())
 }
 $(document).on('click', '.sm', function () {
@@ -821,7 +821,7 @@ function grin (tag, type, before, after) {
 //     loadBotui();
 // });
 
-function add_copyright () {
+/*function add_copyright () {
   document.body.addEventListener('copy', function (e) {
     if (!mashiro_global.is_user_logged_in && window.getSelection().toString().length > 30) {
       setClipboardText(e)
@@ -844,6 +844,7 @@ function setClipboardText (event) {
   }
 }
 add_copyright()
+*/
 $(function () {
   inlojv_js_getqqinfo()
 })
@@ -1102,15 +1103,6 @@ var home = location.href,
             $('.toc').removeClass('toc-fixed')
           }
         }
-      }
-    },
-    AB: function () {
-      if (window.location.pathname.indexOf('about') > -1) {
-        $.getScript('/js/botui.js', function () {
-          if (typeof(botui) == undefined && !botui.message) {
-            bot_ui_ini()
-          }
-        })
       }
     },
     VA: function () {
@@ -1576,7 +1568,6 @@ $(function () {
       Siren.CE()
       Siren.VA()
       Siren.MJ()
-      Siren.AB()
       Siren.TOC()
       Siren.BSZ()
       if (mashiro_option.NProgressON) NProgress.done()
