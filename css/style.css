@@ -820,10 +820,12 @@ optgroup {
 }
 table {
     border-collapse:collapse;
-    border-spacing:0
+    border-spacing:0;
+	border:1px solid black
 }
 td,th {
-    padding:0
+    padding:0;
+	border:1px solid black
 }
 body,button,input,select,textarea {
     color:#404040;
