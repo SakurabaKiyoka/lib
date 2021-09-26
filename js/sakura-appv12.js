@@ -275,6 +275,7 @@ mashiro_global.font_control = new function () {
 		}
 	}
   }
+ }
 }()
 mashiro_global.font_control.ini()
 
