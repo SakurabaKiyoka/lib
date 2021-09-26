@@ -217,33 +217,62 @@ mashiro_global.post_list_show_animation = new function () {
 }()
 mashiro_global.font_control = new function () {
   this.change_font = function () {
-    if ($('body').hasClass('serif')) {
-      $('body').removeClass('serif')
-      $('.control-btn-serif').removeClass('selected')
-      $('.control-btn-sans-serif').addClass('selected')
-      setCookie('font_family', 'sans-serif', 30)
-    } else {
-      $('body').addClass('serif')
-      $('.control-btn-serif').addClass('selected')
-      $('.control-btn-sans-serif').removeClass('selected')
-      setCookie('font_family', 'serif', 30)
-      if (document.body.clientWidth <= 860) {
-        addComment.createButterbar('将从网络加载字体，流量请注意')
-      }
+	if (document.getElementsByTagName("html")[0]["lang"] == "zh-CN"){
+		if ($('body').hasClass('serif-zh')) {
+		  $('body').removeClass('serif-zh')
+		  $('.control-btn-serif').removeClass('selected')
+		  $('.control-btn-sans-serif').addClass('selected')
+		  setCookie('font_family', 'sans-serif', 30)
+		} else {
+		  $('body').addClass('serif-zh')
+		  $('.control-btn-serif').addClass('selected')
+		  $('.control-btn-sans-serif').removeClass('selected')
+		  setCookie('font_family', 'serif', 30)
+		  if (document.body.clientWidth <= 860) {
+			addComment.createButterbar('将从网络加载字体，流量请注意')
+		  }
+		}	
+	} else {
+		if ($('body').hasClass('serif')) {
+		  $('body').removeClass('serif')
+		  $('.control-btn-serif').removeClass('selected')
+		  $('.control-btn-sans-serif').addClass('selected')
+		  setCookie('font_family', 'sans-serif', 30)
+		} else {
+		  $('body').addClass('serif')
+		  $('.control-btn-serif').addClass('selected')
+		  $('.control-btn-sans-serif').removeClass('selected')
+		  setCookie('font_family', 'serif', 30)
+		  if (document.body.clientWidth <= 860) {
+			addComment.createButterbar('将从网络加载字体，流量请注意')
+		  }
+		}	
     }
   }
   this.ini = function () {
     if (document.body.clientWidth > 860) {
-      if (!getCookie('font_family') || getCookie('font_family') == 'serif') { $('body').addClass('serif') }
+      if (!getCookie('font_family') || getCookie('font_family') == 'serif' && document.getElementsByTagName("html")[0]["lang"] == "zh-CN" ) { $('body').addClass('serif-zh') } else if (!getCookie('font_family') || getCookie('font_family') == 'serif' && document.getElementsByTagName("html")[0]["lang"] == "ja"){ $('body').addClass('serif') }
     }
-    if (getCookie('font_family') == 'sans-serif') {
-	  $('body').removeClass('serif')
-      $('.control-btn-serif').removeClass('selected')
-      $('.control-btn-sans-serif').addClass('selected')
-    } else if (getCookie('font_family') == 'serif') {
-      $('body').addClass('serif')
-      $('.control-btn-serif').addClass('selected')
-      $('.control-btn-sans-serif').removeClass('selected')
+	if (document.getElementsByTagName("html")[0]["lang"] == "zh-CN"){
+		if (getCookie('font_family') == 'sans-serif') {
+		  $('body').removeClass('serif-zh')
+		  $('.control-btn-serif').removeClass('selected')
+		  $('.control-btn-sans-serif').addClass('selected')
+		} else if (getCookie('font_family') == 'serif') {
+		  $('body').addClass('serif-zh')
+		  $('.control-btn-serif').addClass('selected')
+		  $('.control-btn-sans-serif').removeClass('selected')
+		}
+	else {
+		if (getCookie('font_family') == 'sans-serif') {
+		  $('body').removeClass('serif')
+		  $('.control-btn-serif').removeClass('selected')
+		  $('.control-btn-sans-serif').addClass('selected')
+		} else if (getCookie('font_family') == 'serif') {
+		  $('body').addClass('serif')
+		  $('.control-btn-serif').addClass('selected')
+		  $('.control-btn-sans-serif').removeClass('selected')
+		}
 	}
   }
 }()
