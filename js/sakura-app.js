@@ -1,4 +1,3 @@
-;
 var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (a) {
   return typeof a
 } : function (a) {
@@ -262,7 +261,7 @@ mashiro_global.font_control = new function () {
 		  $('body').addClass('serif-zh')
 		  $('.control-btn-serif').addClass('selected')
 		  $('.control-btn-sans-serif').removeClass('selected')
-		}
+		}　
 	else {
 		if (getCookie('font_family') == 'sans-serif') {
 		  $('body').removeClass('serif')
@@ -323,52 +322,6 @@ function copy_code_block () {
     $(this).after('<a class="copy-code" href="javascript:" data-clipboard-target="#hljs-' + i + '" title="拷贝代码"><i class="fa fa-clipboard" aria-hidden="true"></i></a>')
   })
   var clipboard = new ClipboardJS('.copy-code')
-}
-
-function attach_image () {
-  $('#upload-img-file').change(function () {
-    if (this.files.length > 10) {
-      addComment.createButterbar('每次上传上限为10张.<br>10 files max per request.')
-      return 0
-    }
-    for (i = 0; i < this.files.length; i++) {
-      if (this.files[i].size >= 5242880) {
-        alert('图片上传大小限制为5 MB.\n5 MB max per file.\n\n「' + this.files[i].name + '」\n\n这张图太大啦~\nThis image is too large~')
-      }
-    }
-    for (var i = 0; i < this.files.length; i++) {
-      var f = this.files[i]
-      var formData = new FormData()
-      formData.append('smfile', f)
-      $.ajax({
-        url: 'https://sm.ms/api/upload',
-        type: 'POST',
-        processData: false,
-        contentType: false,
-        data: formData,
-        beforeSend: function (xhr) {
-          $('.insert-image-tips').html('<i class="fa fa-spinner rotating" aria-hidden="true"></i>')
-          addComment.createButterbar('上传中...<br>Uploading...')
-        }, success: function (res) {
-          $('.insert-image-tips').html('<i class="fa fa-check" aria-hidden="true"></i>')
-          setTimeout(function () {
-            $('.insert-image-tips').html('<i class="fa fa-picture-o" aria-hidden="true"></i>')
-          }, 1000)
-          var get_the_url = res.data.url.replace('https://i.loli.net/', 'https://static.shino.cc/user-upload/')
-          $('#upload-img-show').append('<img class="lazyload upload-image-preview" src="https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/trans.ajax-spinner-preloader.svg" data-src="' + get_the_url + '" onclick="window.open(\'' + get_the_url + '\')" onerror="imgError(this)" />')
-          lazyload()
-          addComment.createButterbar('图片上传成功~<br>Uploaded successfully~')
-          grin(res.data.url.replace('https://i.loli.net/', '{UPLOAD}'), type = 'Img')
-        }, error: function () {
-          $('.insert-image-tips').html('<i class="fa fa-times" aria-hidden="true" style="color:red"></i>')
-          alert('上传失败，请重试.\nUpload failed, please try again.')
-          setTimeout(function () {
-            $('.insert-image-tips').html('<i class="fa fa-picture-o" aria-hidden="true"></i>')
-          }, 1000)
-        }
-      })
-    }
-  })
 }
 
 function clean_upload_images () {
@@ -454,7 +407,6 @@ function scrollBar () {
   }
 }
 scrollBar()
-'主题切换代码好恶心，有空一定要重构'
 
 function checkBgImgCookie () {
   var bgurl = getCookie('bgImgSetting')
@@ -843,37 +795,6 @@ function grin (tag, type, before, after) {
     myField.focus()
   }
 }
-// if ($("div").hasClass("popcontainer")) {
-//     loadBotui();
-// }
-// $("bot-ui").click(function () {
-//     loadBotui();
-// });
-
-/*function add_copyright () {
-  document.body.addEventListener('copy', function (e) {
-    if (!mashiro_global.is_user_logged_in && window.getSelection().toString().length > 30) {
-      setClipboardText(e)
-    }
-  })
-
-function setClipboardText (event) {
-    event.preventDefault()
-    var htmlData = '' + window.getSelection().toString() // CRLF
-	// var htmlData = '' + window.getSelection().toString().replace(/\r\n/g, '\n') convert to LF use this
-    var textData = '' + window.getSelection().toString() // CRLF
-	// var textData = '' + window.getSelection().toString().replace(/\r\n/g, '\n') convert to LF use this
-    if (event.clipboardData) {
-      event.clipboardData.setData('text/html', htmlData)
-      event.clipboardData.setData('text/plain', textData)
-      addComment.createButterbar('复制成功！<br>コピーしました！<br>Copied to clipboard successfully!', 2000)
-    } else if (window.clipboardData) {
-      return window.clipboardData.setData('text', textData)
-    }
-  }
-}
-add_copyright()
-*/
 $(function () {
   inlojv_js_getqqinfo()
 })
@@ -1024,19 +945,6 @@ function get_poem (poem_ele, info_ele) {
   }
   xhr.send()
 }
-
-// function loadBotui() {
-//     if ($('div').hasClass('popcontainer')) {
-//         if (mashiro_global.variables.has_bot_ui) {
-//             bot_ui_ini();
-//         } else {
-//             $.getScript('https://cdn.jsdelivr.net/gh/moezx/cdn@latest/js/botui/botui.js', function () {
-//                 bot_ui_ini();
-//                 mashiro_global.variables.has_bot_ui = true;
-//             });
-//         }
-//     }
-// }
 
 function mail_me () {
   var mail = 'mailto:' + mashiro_option.email_name + '@' + mashiro_option.email_domain
