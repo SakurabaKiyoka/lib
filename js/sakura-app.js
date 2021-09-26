@@ -325,6 +325,52 @@ function copy_code_block () {
   var clipboard = new ClipboardJS('.copy-code')
 }
 
+function attach_image () {
+  $('#upload-img-file').change(function () {
+    if (this.files.length > 10) {
+      addComment.createButterbar('每次上传上限为10张.<br>10 files max per request.')
+      return 0
+    }
+    for (i = 0; i < this.files.length; i++) {
+      if (this.files[i].size >= 5242880) {
+        alert('图片上传大小限制为5 MB.\n5 MB max per file.\n\n「' + this.files[i].name + '」\n\n这张图太大啦~\nThis image is too large~')
+      }
+    }
+    for (var i = 0; i < this.files.length; i++) {
+      var f = this.files[i]
+      var formData = new FormData()
+      formData.append('smfile', f)
+      $.ajax({
+        url: 'https://sm.ms/api/upload',
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        data: formData,
+        beforeSend: function (xhr) {
+          $('.insert-image-tips').html('<i class="fa fa-spinner rotating" aria-hidden="true"></i>')
+          addComment.createButterbar('上传中...<br>Uploading...')
+        }, success: function (res) {
+          $('.insert-image-tips').html('<i class="fa fa-check" aria-hidden="true"></i>')
+          setTimeout(function () {
+            $('.insert-image-tips').html('<i class="fa fa-picture-o" aria-hidden="true"></i>')
+          }, 1000)
+          var get_the_url = res.data.url.replace('https://i.loli.net/', 'https://static.shino.cc/user-upload/')
+          $('#upload-img-show').append('<img class="lazyload upload-image-preview" src="https://cdn.jsdelivr.net/gh/SakurabaKiyoka/lib/img/trans.ajax-spinner-preloader.svg" data-src="' + get_the_url + '" onclick="window.open(\'' + get_the_url + '\')" onerror="imgError(this)" />')
+          lazyload()
+          addComment.createButterbar('图片上传成功~<br>Uploaded successfully~')
+          grin(res.data.url.replace('https://i.loli.net/', '{UPLOAD}'), type = 'Img')
+        }, error: function () {
+          $('.insert-image-tips').html('<i class="fa fa-times" aria-hidden="true" style="color:red"></i>')
+          alert('上传失败，请重试.\nUpload failed, please try again.')
+          setTimeout(function () {
+            $('.insert-image-tips').html('<i class="fa fa-picture-o" aria-hidden="true"></i>')
+          }, 1000)
+        }
+      })
+    }
+  })
+}
+
 function clean_upload_images () {
   $('#upload-img-show').html('')
 }
